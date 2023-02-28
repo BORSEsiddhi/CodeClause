@@ -1,0 +1,177 @@
+:root {
+    --dark: #374151;
+    --darker: #1f2937;
+    --darkest: #111827;
+    --grey: #6b7280;
+    --pink: #ec4899;
+    --purple: #8b5cf6;
+    --light: #eee;
+  }
+  
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fira sans', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+    background-color: var(--dark);
+  
+    background-image: url(https://th.bing.com/th/id/OIP.ao3Otqo4iWNxdncrvzc5PQHaIs?pid=ImgDet&rs=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  
+  header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+   justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    /* color: var(--grey); */
+    color: rgba(12, 10, 10, 0.895);
+    margin-bottom: 1rem;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-style: bold;
+    
+    
+  }
+  
+  #new-task-form {
+    display: flex;
+  }
+  
+  input,
+  button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+  }
+  
+  #new-task-input {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+  }
+  
+  #new-task-input::placeholder {
+    color: var(--grey);
+  }
+  
+  #new-task-submit {
+    color: var(--grey);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--darkest), var(--grey));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  #new-task-submit:hover {
+    opacity: 0.8;
+  }
+  
+  #new-task-submit:active {
+    opacity: 0.6;
+  }
+  
+  main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .task-list {
+    padding: 1rem;
+  }
+  
+  .task-list h2 {
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 1rem;
+    
+    font-family: 'Fira Sans', sans-serif;
+    font-style: bold;
+  }
+  
+  #tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .task .content {
+    flex: 1 1 0%;
+  }
+  
+  .task .content .text {
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+  }
+  
+  .task .content .text:not(:read-only) {
+    color: var(--pink);
+  }
+  
+  .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+  }
+  
+  .task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+  }
+  
+  .task .actions button:hover {
+    opacity: 0.8;
+  }
+  
+  .task .actions button:active {
+    opacity: 0.6;
+  }
+  
+  .task .actions .edit {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .task .actions .delete {
+    color: crimson;
+  }
